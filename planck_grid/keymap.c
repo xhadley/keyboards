@@ -10,15 +10,12 @@ enum layer_number {
   _LOWER,
   _RAISE,
   _ADJUST
-}
+};
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE
 };
 
-
-#define _______ KC_TRNS
-#define XXXXXXX KC_NO
 
 #define NAV MO(_NAV)
 #define LOWER MO(_LOWER)
@@ -110,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      |      |      |      | Lower| Nav  |      | Raise|      |      |      | Flash|
  * `-----------------------------------------------------------------------------------'
  */
-[_MENU] = {
+[_ADJUST] = {
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
   {NK_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
@@ -119,31 +116,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
+layer_state_t layer_state_set_user(layer_state_t state) {
+  return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
+}
+
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case EXIT:
+    case QWERTY:
       if (record->event.pressed) {
-        layer_clear();
-        clear_keyboard();
+        set_single_persistent_default_layer(_QWERTY);
       }
-      break;
-    case LOWER:
-      if (record->event.pressed) {
-        layer_on(_LOWER);
-        update_tri_layer(_LOWER, _RAISE, _MENU);
-      } else {
-        layer_off(_LOWER);
-        update_tri_layer(_LOWER, _RAISE, _MENU);
-      }
-      break;
-    case RAISE:
-      if (record->event.pressed) {
-        layer_on(_RAISE);
-        update_tri_layer(_LOWER, _RAISE, _MENU);
-      } else {
-        layer_off(_RAISE);
-        update_tri_layer(_LOWER, _RAISE, _MENU);
-      }
+      return false;
       break;
   }
   return true;

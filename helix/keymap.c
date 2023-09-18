@@ -26,11 +26,11 @@
 
 
 enum layer_number {
-    _QWERTY = 0,
-    _NAV,
-    _LOWER,
-    _RAISE,
-    _ADJUST
+  _QWERTY = 0,
+  _NAV,
+  _LOWER,
+  _RAISE,
+  _ADJUST
 };
 
 enum custom_keycodes {
