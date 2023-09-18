@@ -23,7 +23,6 @@ enum custom_keycodes {
 #define KC_FN	MO(_FN)
 #define KC_LOWR	LOWER
 #define KC_RASE RAISE
-#define KC_RST	RESET
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -94,13 +93,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------.                                        .------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |\/\/\/|      |                                        |      |\/\/\/|      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------|                                        |------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      | LOWER|      |      |                                        |      |      | RAISE|      |      |      |      |      | Reset|
+ * |      |      |      |      |      |      | LOWER|      |      |                                        |      |      | RAISE|      |      |      |      |      | Flash|
  * '--------------------------------------------------------------'                                        '--------------------------------------------------------------'
  */
 [_MENU] = {
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                                               XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
   {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX},
-  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET  }
+  {XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT}
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {

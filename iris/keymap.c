@@ -24,7 +24,7 @@ enum custom_keycodes {
 #define KC_FN   MO(_FN)
 #define KC_LOWR LOWER
 #define KC_RASE RAISE
-#define KC_RST  RESET
+#define KC_BOOT QK_BOOT
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----|              |----+----+----+----+----+----|
       XX , XX , XX , XX , XX , XX ,                XX , XX , XX , XX , XX , XX ,
   //|----+----+----+----+----+----+----.    ,----|----+----+----+----+----+----|
-      XX , XX , XX , XX , XX , XX , XX ,      XX , XX , XX , XX , XX , XX ,RST ,
+      XX , XX , XX , XX , XX , XX , XX ,      XX , XX , XX , XX , XX , XX ,BOOT,
   //`----+----+----+--+-+----+----+----/    \----+----+----+----+----+----+----'
                         XX ,    , XX ,          XX ,    , XX
   //                  `----+----+----'        `----+----+----'
