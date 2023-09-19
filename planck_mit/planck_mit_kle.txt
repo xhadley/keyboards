@@ -6,11 +6,11 @@
 ["shft","","left","down","rght","","","end","pg dn","","","del"],
 ["ctrl","","","","","","","","","","","entr"],
 ["esc",{g:true},"nav",{g:false},"win","alt","lower",{w:2},"spc","raise","prev","play/ pause","next","mute"],
-[{y:2},"tab","1","2","3","4","5","`","!","@","#","$","bksp"],
-["shft","6","7","8","9","0",",",".","=","^","%","del"],
-["ctrl","+","-","*","/","entr","","","","","","entr"],
-["esc","nav","win","alt",{g:true},"lower",{g:false},{w:2},"spc","raise","prev","play/ pause","next","mute"],
+[{y:2},"tab","-","1","2","3","+","","!","@","#","$","bksp"],
+["shft","*","4","5","6",".","","=","^","%","`","del"],
+["ctrl","/","7","8","9","0","","","","","","entr"],
+["esc","entr","win","alt",{g:true},"lower",{g:false},{w:2},"spc","raise","prev","play/ pause","next","mute"],
 [{y:2},"tab","F1","F2","F3","F4","","","{","}","_","\\","bksp"],
 ["shft","F5","F6","F7","F8","","","(",")","&","|","del"],
 ["ctrl","F9","F10","F11","F12","","","[","]","","","entr"],
-["esc","nav","win","alt","lower",{w:2},"spc",{g:true},"raise",{g:false},"prev","play/ pause","next","mute"]
+["esc","","win","alt","lower",{w:2},"spc",{g:true},"raise",{g:false},"prev","play/ pause","next","mute"]
