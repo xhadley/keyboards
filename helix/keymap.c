@@ -15,15 +15,6 @@
  */
 
 #include QMK_KEYBOARD_H
-#include "bootloader.h"
-#ifdef PROTOCOL_LUFA
-#include "lufa.h"
-#include "split_util.h"
-#endif
-#ifdef AUDIO_ENABLE
-  #include "audio.h"
-#endif
-
 
 enum layer_number {
   _QWERTY = 0,

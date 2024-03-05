@@ -1,8 +1,4 @@
-#include "planck.h"
-#include "action_layer.h"
-#include "eeconfig.h"
-
-extern keymap_config_t keymap_config;
+#include QMK_KEYBOARD_H
 
 enum layer_number {
   _QWERTY = 0,
@@ -15,7 +11,6 @@ enum layer_number {
 enum custom_keycodes {
   QWERTY = SAFE_RANGE
 };
-
 
 #define NAV MO(_NAV)
 #define LOWER MO(_LOWER)
@@ -100,7 +95,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 layer_state_t layer_state_set_user(layer_state_t state) {
   return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
 }
-
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {

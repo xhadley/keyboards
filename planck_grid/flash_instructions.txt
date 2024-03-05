@@ -1,0 +1,7 @@
+rev 3 (zeal switches):
+
+build:
+qmk compile -kb planck/rev3 -km xhadley_grid
+
+flash:
+make planck/rev3:xhadley_grid:dfu

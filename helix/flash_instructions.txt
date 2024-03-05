@@ -1,0 +1,8 @@
+build
+qmk compile -kb helix -km xhadley
+
+flash left hand:
+make helix/rev2:xhadley:dfu-split-left
+
+flash right hand:
+make helix/rev2:xhadley:dfu-split-right
