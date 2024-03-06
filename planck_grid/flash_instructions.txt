@@ -1,8 +1,5 @@
-build
-qmk compile -kb helix -km xhadley
+build (zeal switches):
+qmk compile -kb planck/rev3 -km xhadley_grid
 
-flash left hand:
-make helix/rev2:xhadley:dfu-split-left
-
-flash right hand:
-make helix/rev2:xhadley:dfu-split-right
+flash (zeal switches):
+make planck/rev3:xhadley_grid:dfu
