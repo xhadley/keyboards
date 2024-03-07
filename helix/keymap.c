@@ -28,14 +28,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Ctrl |   Z  |   X  |   C  |   V  |   B  |             |   N  |   M  |   ,  |   .  |   /  | Enter|
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-   * | Mute |      |      | Alt  | Lower| Nav  | Space| Esc  | Space| Raise| Win  | Prev | Play | Next |
+   * | Mute |      |      | Alt  | Space| Lower| Nav | Esc  | Space| Raise| Win  | Prev | Play | Next |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_QWERTY] = LAYOUT( \
       KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
       KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                      KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
       KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,  \
-      KC_MUTE, XXXXXXX, XXXXXXX, KC_LALT, LOWER,   NAV,     KC_SPC,  KC_ESC,  KC_SPC,  RAISE,   KC_LGUI, KC_MPRV, KC_MPLY, KC_MNXT, \
+      KC_MUTE, XXXXXXX, XXXXXXX, KC_LALT, KC_SPC,  LOWER,   NAV,     KC_ESC,  KC_SPC,  RAISE,   KC_LGUI, KC_MPRV, KC_MPLY, KC_MNXT, \
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  \
       ),
 
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Ctrl | Mute | Prev | Play | Next |      |             |      |      |      |      |      | Enter|
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-   * |      |      |      | Alt  | Lower| Nav  | Space| Esc  | Space| Raise| Win  |      |      |      |
+   * |      |      |      | Alt  | Space| Lower| Nav  | Esc  | Space| Raise| Win  |      |      |      |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_NAV] = LAYOUT( \
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Ctrl |   .  |   9  |   0  |   +  |      |             |   ~  |   =  |   -  |   .  |   /  | Enter|
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-   * |      |      |      | Alt  | Lower| Nav  | Space| Esc  | Space| Raise| Win  |      |      |      |
+   * |      |      |      | Alt  | Space| Lower| Nav  | Esc  | Space| Raise| Win  |      |      |      |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_LOWER] = LAYOUT( \
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Ctrl |  F9  |  F10 |  F11 |  F12 |      |             |      |   [  |   ]  |   \  |   /  | Enter|
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-   * |      |      |      | Alt  | Lower| Nav  | Space| Esc  | Space| Raise| Win  |      |      |      |
+   * |      |      |      | Alt  | Space| Lower| Nav  | Esc  | Space| Raise| Win  |      |      |      |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_RAISE] = LAYOUT( \
@@ -104,14 +104,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * |      |      |      |      |      |      |             |      |      |      |      |      | Flash|
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-   * |      |      |      |      | Lower|      |      |      |      | Raise|      |      |      |      |
+   * |      |      |      |      |      | Lower|      |      |      | Raise|      |      |      |      |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_ADJUST] =  LAYOUT( \
       NK_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, \
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, \
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  \
       )
 };
