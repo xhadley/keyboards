@@ -60,19 +60,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Lower
    * ,-----------------------------------------.             ,-----------------------------------------.
-   * | Tab  |   1  |   2  |   3  |   4  |      |             |      |   !  |   @  |   #  |   $  | Bksp |
+   * | Tab  |   1  |   2  |   3  |   4  |   5  |             |      |   !  |   @  |   #  |   $  | Bksp |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * | Shift|   5  |   6  |   7  |   8  |      |             |   `  |   %  |   ^  |   &  |   *  | Del  |
+   * | Shift|   6  |   7  |   8  |   9  |   0  |             |   `  |   %  |   ^  |   &  |   *  | Del  |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * | Ctrl |   .  |   9  |   0  |   +  |      |             |   ~  |   =  |   -  |   .  |   /  | Enter|
+   * | Ctrl |      |      |   .  |   +  |      |             |   ~  |   =  |   -  |   .  |   /  | Enter|
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
    * |      |      |      | Alt  | Space| Lower| Nav  | Esc  | Space| Raise| Win  |      |      |      |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_LOWER] = LAYOUT( \
-      _______, KC_1,    KC_2,    KC_3,    KC_4,    XXXXXXX,                   XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  _______, \
-      _______, KC_5,    KC_6,    KC_7,    KC_8,    XXXXXXX,                   KC_GRV,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_DEL,  \
-      _______, KC_DOT,  KC_9,    KC_0,    KC_PLUS, XXXXXXX,                   KC_TILD, KC_EQL,  KC_MINS, KC_DOT,  KC_SLSH, _______, \
+      _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  _______, \
+      _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,                      KC_GRV,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_DEL,  \
+      _______, XXXXXXX, XXXXXXX, KC_DOT,  KC_PLUS, XXXXXXX,                   KC_TILD, KC_EQL,  KC_MINS, KC_DOT,  KC_SLSH, _______, \
       XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, \
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  \
       ),
